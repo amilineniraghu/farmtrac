@@ -8,6 +8,7 @@ public class FarmtracApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(FarmtracApplication.class, args);
+		System.out.println("First springboot app on git");
 	}
 
 }
