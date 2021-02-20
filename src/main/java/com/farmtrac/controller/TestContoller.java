@@ -1,7 +1,7 @@
 package com.farmtrac.controller;
 
-import java.util.Map;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api")
 public class TestContoller{
-
+	 private static final Logger logger = LogManager.getLogger(TestContoller.class);
 	@GetMapping("/getList")
-	public String testGetMethod(Map map) {
-		System.out.println("getList request is called");
+	public String testGetMethod() {
+		logger.info("getList request is called");
 		return "test";
 	}
 }
